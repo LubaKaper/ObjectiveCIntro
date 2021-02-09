@@ -27,6 +27,15 @@ int main(int argc, const char * argv[]) {
         int result =  add(10, 12);
         NSLog(@"the result of addition is %i. !!!", result);
         // the result of addition is 22. !!!
+        
+        // declare a string
+        
+        // NSString is an object that allocates memory on the Heap(a place (buffer) in memory)
+        //let name = "Bob"
+        NSString *name = @"Alex";
+        
+        // print name
+        NSLog(@"The person name is %@", name);
     }
     return 0;
 }
