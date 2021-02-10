@@ -35,7 +35,31 @@ int main(int argc, const char * argv[]) {
         NSString *name = @"Alex";
         
         // print name
-        NSLog(@"The person name is %@", name);
+        NSLog(@"The person name is %@.", name);
+        
+        // mutable string
+        
+        NSMutableString *language = [[NSMutableString alloc] initWithString:@"The language"];
+        NSLog(@"language: %@", language);
+        
+        // calling functions in Obj C
+        
+        [language appendString:@" is Objective C"];
+        NSLog(@"message: %@.", language);
+        // in Swift: var language = "The language"
+        
+        // array
+        //In Obj-C you can have mixed arrays, with different types. In Swift you can't
+        NSArray *programmingStacks = @[@"Swift", @"Obj-C", @"Python", @"Java"];
+       // var programmingStacks = ["Obj-C", "Swift"] // [String]
+        
+        //iterate through array
+        for (NSString *language in programmingStacks) {
+            if ([language isEqual: @"Swift"]){
+                NSLog(@"%@ Best language ever!",language);
+            }
+          //  NSLog(@"The language is %@",language);
+        }
     }
     return 0;
 }
